@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Montserratat";
+  src: url("https://fonts.google.com/specimen/Montserrat?query=monts");
+}
+
+* {
+  color: #212429;
+  font-family: "Montserrat";
+}
+
+body {
+  padding-top: 8vh;
+  margin: 0;
+}
+
+#menu {
+  text-decoration: none;
+
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #212429;
+  height: 8vh;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+#lettersMenu {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+#iconsMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.menuItem {
+  text-decoration: none;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.productData {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#productGallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 250px 250px 250px;
+  gap: 50px;
+  grid-auto-rows: auto;
+  margin: 5vh 0 5vh 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 5vh;
+}
+
+footer {
+  background-color: #212429;
+  padding: 2rem 4rem 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.iconCircle {
+  background-color: white;
+  padding: 0.8rem;
+  max-width: fit-content;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksIcon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+#devoluciones {
+  color: white;
+  text-decoration: none;
+}
