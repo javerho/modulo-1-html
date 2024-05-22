@@ -6,31 +6,36 @@
 * {
   color: #212429;
   font-family: "Montserrat";
+  box-sizing: border-box;
 }
 
 body {
   padding-top: 8vh;
   margin: 0;
+  width: 100vw;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 #menu {
   text-decoration: none;
-
   display: flex;
   gap: 100px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid #212429;
   height: 8vh;
   margin: 0;
   width: 100%;
   background-color: white;
-  position: fixed;
-  top: 0;
-  z-index: 10;
 }
 
-#lettersMenu {
+.menuItems {
   font-size: 1rem;
   display: flex;
   justify-content: center;
@@ -38,14 +43,27 @@ body {
   gap: 3rem;
 }
 
-#iconsMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+/*para el menu burguer*/
+@media (max-width: 920px) {
+  .menuItems {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
 }
 
-.menuItem {
+
+.menuItems a {
   text-decoration: none;
 }
 
@@ -61,7 +79,7 @@ body {
   font-size: 14px;
 }
 
-img {
+.productCard img {
   width: 100%;
   border-radius: 10px;
 }
@@ -75,39 +93,86 @@ img {
   margin: 5vh 0 5vh 0;
 }
 
-h1 {
-  font-size: 2rem;
-  margin: 5vh;
+@media (max-width: 920px) {
+  #productGallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 250px;
+    gap: 50px;
+    grid-auto-rows: auto;
+  }
 }
 
-footer {
-  background-color: #212429;
-  padding: 2rem 4rem 2rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-}
+  h1 {
+    font-size: 2rem;
+    margin: 5vh;
+  }
 
-.iconCircle {
-  background-color: white;
-  padding: 0.8rem;
-  max-width: fit-content;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  @media (max-width: 920px) {
+    h1 {
+      font-size: 1.5rem;
+      margin: 2vh;
+    }
+  }
 
-.linksIcon {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-}
+  footer {
+    background-color: #212429;
+    padding: 2rem 4rem 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
 
-#devoluciones {
-  color: white;
-  text-decoration: none;
-}
+  @media (max-width: 920px) {
+    footer {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    footer a {
+      height: 4rem;
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      border-bottom: 1px solid white;
+    }
+
+    .iconCircle {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .iconCircle img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .iconCircle {
+    background-color: white;
+    padding: 0.8rem;
+    max-width: fit-content;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linksIcon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+
+  #devoluciones {
+    color: white;
+    text-decoration: none;
+  }
